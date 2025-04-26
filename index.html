@@ -149,181 +149,8 @@
     </style>
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-    <!-- Splash Screen -->
-    <div id="splash-page" class="page active flex flex-col items-center justify-center min-h-screen bg-white dark:bg-gray-900 animate-fade-in">
-        <div class="text-center p-8">
-            <div class="text-6xl mb-4 text-primary"><i class="fas fa-store"></i></div>
-            <h1 class="text-3xl font-bold mb-2 text-primary">Marketplace</h1>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-8">A trusted platform to buy and sell</p>
-            <div class="mt-8">
-                <div class="spinner w-12 h-12 mx-auto"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Login Page -->
-    <div id="login-page" class="page">
-        <div class="flex flex-col items-center justify-center min-h-screen p-4">
-            <div class="w-full max-w-md bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-fade-in">
-                <div class="text-4xl text-center mb-6 text-primary"><i class="fas fa-store"></i></div>
-                <h1 class="text-2xl font-bold text-center mb-6">Welcome to Marketplace</h1>
-                
-                <div class="mb-4">
-                    <label class="block text-sm font-medium mb-2" for="email">Email</label>
-                    <input type="email" id="email" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="your@email.com" value="test@example.com">
-                </div>
-                
-                <div class="mb-6">
-                    <label class="block text-sm font-medium mb-2" for="password">Password</label>
-                    <input type="password" id="password" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="••••••••" value="password123">
-                </div>
-                
-                <button id="login-btn" class="w-full bg-primary text-white py-3 px-4 rounded-md hover:bg-secondary transition-colors mb-4 text-base font-medium">
-                    Login
-                </button>
-                
-                <button id="register-btn" class="w-full bg-white dark:bg-gray-700 text-primary dark:text-white py-3 px-4 border border-primary dark:border-gray-600 rounded-md hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors text-base font-medium">
-                    Create Account
-                </button>
-                
-                <div class="mt-4 text-center">
-                    <a href="#" class="text-sm text-primary hover:underline">Forgot password?</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Registration Page -->
-    <div id="register-page" class="page">
-        <div class="flex flex-col min-h-screen p-4">
-            <div class="flex items-center mb-6">
-                <button id="back-to-login" class="text-primary mr-2 p-2"><i class="fas fa-arrow-left"></i></button>
-                <h1 class="text-xl font-bold">Create Account</h1>
-            </div>
-            
-            <div class="w-full bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-fade-in mb-4">
-                <div class="flex mb-4">
-                    <button class="user-type-btn flex-1 py-2 px-4 border-b-2 border-primary text-primary font-medium" data-type="buyer">Buyer</button>
-                    <button class="user-type-btn flex-1 py-2 px-4 border-b-2 border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 font-medium" data-type="seller">Seller</button>
-                </div>
-                
-                <div id="registration-form" class="space-y-4 mt-6">
-                    <div>
-                        <label class="block text-sm font-medium mb-2" for="reg-fullname">Full Name</label>
-                        <input type="text" id="reg-fullname" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="John Doe" value="Sarah Johnson">
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium mb-2" for="reg-email">Email</label>
-                        <input type="email" id="reg-email" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="your@email.com" value="sarah@example.com">
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium mb-2" for="reg-phone">Phone Number</label>
-                        <input type="tel" id="reg-phone" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="+1 234 567 8900" value="+1 555 123 4567">
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium mb-2" for="reg-password">Password</label>
-                        <input type="password" id="reg-password" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="••••••••" value="securepass123">
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium mb-2" for="reg-confirm-password">Confirm Password</label>
-                        <input type="password" id="reg-confirm-password" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="••••••••" value="securepass123">
-                    </div>
-
-                    <div class="seller-fields hidden">
-                        <div class="bg-yellow-50 dark:bg-yellow-900/30 p-3 rounded-md mb-4">
-                            <p class="text-sm text-yellow-700 dark:text-yellow-200">
-                                <i class="fas fa-info-circle mr-1"></i>
-                                Sellers need to complete additional verification steps after registration.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <button id="complete-registration" class="w-full bg-primary text-white py-3 px-4 rounded-md hover:bg-secondary transition-colors text-base font-medium">
-                            Continue
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Verification Page -->
-    <div id="verification-page" class="page">
-        <div class="flex flex-col min-h-screen p-4">
-            <div class="flex items-center mb-6">
-                <button class="back-btn text-primary mr-2 p-2"><i class="fas fa-arrow-left"></i></button>
-                <h1 class="text-xl font-bold">Identity Verification</h1>
-            </div>
-            
-            <div class="w-full bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-fade-in mb-4">
-                <div class="space-y-6">
-                    <div class="flex items-center">
-                        <div class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">1</div>
-                        <div class="flex-1">
-                            <h3 class="text-lg font-medium">Upload ID Document</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Passport, Driver's License or National ID</p>
-                        </div>
-                        <div>
-                            <button class="upload-doc-btn text-white bg-primary py-2 px-3 rounded-md text-sm">Upload</button>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-center">
-                        <div class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">2</div>
-                        <div class="flex-1">
-                            <h3 class="text-lg font-medium">Take a Selfie</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">We'll match it with your ID document</p>
-                        </div>
-                        <div>
-                            <button class="selfie-btn text-white bg-primary py-2 px-3 rounded-md text-sm">Take Photo</button>
-                        </div>
-                    </div>
-                    
-                    <div id="seller-verification-steps" class="hidden space-y-6">
-                        <div class="flex items-center">
-                            <div class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">3</div>
-                            <div class="flex-1">
-                                <h3 class="text-lg font-medium">Address Verification</h3>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">Utility bill or bank statement</p>
-                            </div>
-                            <div>
-                                <button class="address-doc-btn text-white bg-primary py-2 px-3 rounded-md text-sm">Upload</button>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <div class="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">4</div>
-                            <div class="flex-1">
-                                <h3 class="text-lg font-medium">Business Photos</h3>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">Photos of your business or products</p>
-                            </div>
-                            <div>
-                                <button class="business-photos-btn text-white bg-primary py-2 px-3 rounded-md text-sm">Upload</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                            <i class="fas fa-shield-alt text-primary mr-1"></i>
-                            Your data is encrypted and securely stored. We do not share your personal information with third parties.
-                        </p>
-                        <button id="complete-verification" class="w-full bg-primary text-white py-3 px-4 rounded-md hover:bg-secondary transition-colors text-base font-medium">
-                            Submit for Verification
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main App -->
-    <div id="main-app" class="page">
+    <!-- Main App - Starting directly from here -->
+    <div id="main-app" class="page active">
         <div class="flex flex-col min-h-screen">
             <!-- Content Area -->
             <div class="flex-1 overflow-auto">
@@ -385,5 +212,146 @@
                                     <i class="fas fa-car text-lg text-yellow-600 dark:text-yellow-300"></i>
                                 </div>
                                 <span class="text-xs text-center">Vehicles</span>
-        </div>
-                        
+                            </div>
+                            <div class="flex flex-col items-center min-w-[72px]">
+                                <div class="w-14 h-14 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center mb-2">
+                                    <i class="fas fa-ellipsis-h text-lg text-gray-600 dark:text-gray-300"></i>
+                                </div>
+                                <span class="text-xs text-center">More</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Featured Items for Beginners -->
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-3">
+                            <h2 class="font-bold">For Beginners</h2>
+                            <a href="#" class="text-primary text-sm">See All</a>
+                        </div>
+                        <div class="bg-yellow-50 dark:bg-yellow-900/30 p-3 rounded-md mb-4">
+                            <p class="text-sm text-yellow-700 dark:text-yellow-200">
+                                <i class="fas fa-info-circle mr-1"></i>
+                                As a new user, you can buy items under $50 to build trust.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden product-card" data-price="25" data-id="p001">
+                                <div class="product-image h-32 bg-gray-100 dark:bg-gray-700 relative" style="background-image: url('https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&auto=format&fit=crop&q=80')">
+                                    <div class="absolute top-2 right-2 bg-white dark:bg-gray-800 text-primary rounded-full w-8 h-8 flex items-center justify-center shadow">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="p-3">
+                                    <h3 class="font-medium text-sm truncate-2">Wireless Bluetooth Earbuds</h3>
+                                    <div class="flex items-center mt-1">
+                                        <span class="text-yellow-500 text-xs mr-1"><i class="fas fa-star"></i></span>
+                                        <span class="text-xs">4.5</span>
+                                        <span class="text-gray-500 dark:text-gray-400 text-xs ml-1">(124)</span>
+                                    </div>
+                                    <div class="flex items-center justify-between mt-2">
+                                        <span class="font-bold">$25.99</span>
+                                        <button class="buy-btn text-xs bg-primary text-white py-1 px-2 rounded">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden product-card" data-price="19" data-id="p002">
+                                <div class="product-image h-32 bg-gray-100 dark:bg-gray-700 relative" style="background-image: url('https://images.unsplash.com/photo-1559563458-527698bf5295?w=400&auto=format&fit=crop&q=80')">
+                                    <div class="absolute top-2 right-2 bg-white dark:bg-gray-800 text-primary rounded-full w-8 h-8 flex items-center justify-center shadow">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="p-3">
+                                    <h3 class="font-medium text-sm truncate-2">Premium Phone Case - iPhone 13</h3>
+                                    <div class="flex items-center mt-1">
+                                        <span class="text-yellow-500 text-xs mr-1"><i class="fas fa-star"></i></span>
+                                        <span class="text-xs">4.2</span>
+                                        <span class="text-gray-500 dark:text-gray-400 text-xs ml-1">(87)</span>
+                                    </div>
+                                    <div class="flex items-center justify-between mt-2">
+                                        <span class="font-bold">$19.99</span>
+                                        <button class="buy-btn text-xs bg-primary text-white py-1 px-2 rounded">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Popular Now -->
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-3">
+                            <h2 class="font-bold">Popular Now</h2>
+                            <a href="#" class="text-primary text-sm">See All</a>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden product-card" data-price="42" data-id="p003">
+                                <div class="product-image h-32 bg-gray-100 dark:bg-gray-700 relative" style="background-image: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&auto=format&fit=crop&q=80')">
+                                    <div class="absolute top-2 right-2 bg-white dark:bg-gray-800 text-primary rounded-full w-8 h-8 flex items-center justify-center shadow">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="p-3">
+                                    <h3 class="font-medium text-sm truncate-2">Nike Running Shoes</h3>
+                                    <div class="flex items-center mt-1">
+                                        <span class="text-yellow-500 text-xs mr-1"><i class="fas fa-star"></i></span>
+                                        <span class="text-xs">4.7</span>
+                                        <span class="text-gray-500 dark:text-gray-400 text-xs ml-1">(356)</span>
+                                    </div>
+                                    <div class="flex items-center justify-between mt-2">
+                                        <span class="font-bold">$42.50</span>
+                                        <button class="buy-btn text-xs bg-primary text-white py-1 px-2 rounded">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden product-card" data-price="31" data-id="p004">
+                                <div class="product-image h-32 bg-gray-100 dark:bg-gray-700 relative" style="background-image: url('https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=400&auto=format&fit=crop&q=80')">
+                                    <div class="absolute top-2 right-2 bg-white dark:bg-gray-800 text-primary rounded-full w-8 h-8 flex items-center justify-center shadow">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="p-3">
+                                    <h3 class="font-medium text-sm truncate-2">Bluetooth Speaker - Waterproof</h3>
+                                    <div class="flex items-center mt-1">
+                                        <span class="text-yellow-500 text-xs mr-1"><i class="fas fa-star"></i></span>
+                                        <span class="text-xs">4.3</span>
+                                        <span class="text-gray-500 dark:text-gray-400 text-xs ml-1">(192)</span>
+                                    </div>
+                                    <div class="flex items-center justify-between mt-2">
+                                        <span class="font-bold">$31.99</span>
+                                        <button class="buy-btn text-xs bg-primary text-white py-1 px-2 rounded">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Top Rated Sellers -->
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-3">
+                            <h2 class="font-bold">Top Rated Sellers</h2>
+                            <a href="#" class="text-primary text-sm">See All</a>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="bg-white dark:bg-gray-800 rounded-lg p-3 flex items-center">
+                                <div class="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-full mr-3 seller-avatar" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80')"></div>
+                                <div class="flex-1">
+                                    <h3 class="font-medium">TechGadgets</h3>
+                                    <div class="flex items-center">
+                                        <span class="text-yellow-500 text-xs mr-1"><i class="fas fa-star"></i></span>
+                                        <span class="text-xs">4.9</span>
+                                        <span class="text-gray-500 dark:text-gray-400 text-xs ml-1">(342 reviews)</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="text-primary text-sm border border-primary rounded-full py-1 px-3">View</button>
+                                </div>
+                            </div>
+                            <div class="bg-white dark:bg-gray-800 rounded-lg p-3 flex items-center">
+                                <div class="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-full mr-3 seller-avatar" style="background-image: url('https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80')"></div>
+                                <div class="flex-1">
+                                    <h3 class="font-medium">FashionHub</h3>
+                                    <div class="flex items-center">
+                                        <span class="text-yellow-500 text-xs mr-1"><i class="fas fa-star"></i></span>
+                                        <span class="text-xs">4.8</span>
+                                        <span class="text-gray-500 dark:text-gray-400 text-xs ml-1">(215 reviews)</span>
+                                    </div>
+                     
