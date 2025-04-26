@@ -121,6 +121,31 @@
         body.modal-open {
             overflow: hidden;
         }
+        
+        /* Product card aspect ratio */
+        .product-image {
+            aspect-ratio: 1 / 1;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Seller profile image */
+        .seller-avatar {
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Loading spinner */
+        .spinner {
+            border: 3px solid rgba(0,0,0,.1);
+            border-radius: 50%;
+            border-top-color: #5D5CDE;
+            animation: spinner 0.6s linear infinite;
+        }
+        
+        @keyframes spinner {
+            to {transform: rotate(360deg);}
+        }
     </style>
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
@@ -131,7 +156,7 @@
             <h1 class="text-3xl font-bold mb-2 text-primary">Marketplace</h1>
             <p class="text-sm text-gray-600 dark:text-gray-400 mb-8">A trusted platform to buy and sell</p>
             <div class="mt-8">
-                <div class="w-12 h-12 border-t-4 border-primary border-solid rounded-full animate-spin mx-auto"></div>
+                <div class="spinner w-12 h-12 mx-auto"></div>
             </div>
         </div>
     </div>
@@ -145,12 +170,12 @@
                 
                 <div class="mb-4">
                     <label class="block text-sm font-medium mb-2" for="email">Email</label>
-                    <input type="email" id="email" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="your@email.com">
+                    <input type="email" id="email" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="your@email.com" value="test@example.com">
                 </div>
                 
                 <div class="mb-6">
                     <label class="block text-sm font-medium mb-2" for="password">Password</label>
-                    <input type="password" id="password" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="••••••••">
+                    <input type="password" id="password" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="••••••••" value="password123">
                 </div>
                 
                 <button id="login-btn" class="w-full bg-primary text-white py-3 px-4 rounded-md hover:bg-secondary transition-colors mb-4 text-base font-medium">
@@ -185,27 +210,27 @@
                 <div id="registration-form" class="space-y-4 mt-6">
                     <div>
                         <label class="block text-sm font-medium mb-2" for="reg-fullname">Full Name</label>
-                        <input type="text" id="reg-fullname" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="John Doe">
+                        <input type="text" id="reg-fullname" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="John Doe" value="Sarah Johnson">
                     </div>
                     
                     <div>
                         <label class="block text-sm font-medium mb-2" for="reg-email">Email</label>
-                        <input type="email" id="reg-email" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="your@email.com">
+                        <input type="email" id="reg-email" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="your@email.com" value="sarah@example.com">
                     </div>
                     
                     <div>
                         <label class="block text-sm font-medium mb-2" for="reg-phone">Phone Number</label>
-                        <input type="tel" id="reg-phone" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="+1 234 567 8900">
+                        <input type="tel" id="reg-phone" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="+1 234 567 8900" value="+1 555 123 4567">
                     </div>
                     
                     <div>
                         <label class="block text-sm font-medium mb-2" for="reg-password">Password</label>
-                        <input type="password" id="reg-password" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="••••••••">
+                        <input type="password" id="reg-password" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="••••••••" value="securepass123">
                     </div>
                     
                     <div>
                         <label class="block text-sm font-medium mb-2" for="reg-confirm-password">Confirm Password</label>
-                        <input type="password" id="reg-confirm-password" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="••••••••">
+                        <input type="password" id="reg-confirm-password" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:text-white" placeholder="••••••••" value="securepass123">
                     </div>
 
                     <div class="seller-fields hidden">
@@ -311,8 +336,9 @@
                                 <i class="fas fa-store mr-2"></i> Marketplace
                             </div>
                             <div class="flex items-center">
-                                <button class="p-2 ml-2 text-gray-600 dark:text-gray-300">
+                                <button class="p-2 ml-2 text-gray-600 dark:text-gray-300 relative">
                                     <i class="fas fa-bell"></i>
+                                    <span class="absolute top-1 right-1 h-2 w-2 bg-red-500 rounded-full"></span>
                                 </button>
                             </div>
                         </div>
@@ -359,19 +385,5 @@
                                     <i class="fas fa-car text-lg text-yellow-600 dark:text-yellow-300"></i>
                                 </div>
                                 <span class="text-xs text-center">Vehicles</span>
-                            </div>
-                            <div class="flex flex-col items-center min-w-[72px]">
-                                <div class="w-14 h-14 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center mb-2">
-                                    <i class="fas fa-ellipsis-h text-lg text-gray-600 dark:text-gray-300"></i>
-                                </div>
-                                <span class="text-xs text-center">More</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Featured Items for Beginners -->
-                    <div class="p-4">
-                        <div class="flex justify-between items-center mb-3">
-                            <h2 class="font-bold">For Beginners</h2>
-                            <a href="#" class="text-primary text-sm">See All</a>
-                       
+        </div>
+                        
